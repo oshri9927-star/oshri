@@ -71,7 +71,8 @@
 <h3>1.4 לקוחות קצה (מקבלי המשלוח)</h3>
 <ul>
 <li>שם, מספר טלפון, כתובת מסירה (כולל קומה ודירה), הערות ופריטים; בחלק מהמשלוחים (למשל דואר) – מספר תעודת זהות של המקבל</li>
-<li>המידע מוזן ע"י העסק או חברת המשלוחים. כתובות מסירה נשמרות אצל העסק כדי להשלים אוטומטית משלוחים עתידיים לאותו לקוח.</li>
+<li>המידע מוזן ע"י העסק או חברת המשלוחים.</li>
+<li><strong>ספר כתובות משותף:</strong> הכתובת האחרונה של לקוח (שם, עיר, רחוב, מספר בית, קומה, דירה וקוד כניסה) נשמרת לפי מספר הטלפון שלו, ו<strong>עשויה להיות מוצעת גם לעסקים ולחברות משלוחים אחרים בפלטפורמה</strong> כשהם מזינים את אותו מספר טלפון בהזמנה עתידית. כל הזמנה חדשה מעדכנת את הכתובת השמורה. הכתובת נשלפת רק לפי מספר טלפון מדויק (אין אפשרות לעיין ברשימת הכתובות), ורק ע"י מנהלי חברות משלוחים ועסקים — לא ע"י שליחים. לקוח יכול לבקש למחוק את הכתובת השמורה שלו במייל (סעיף 8).</li>
 </ul>
 <h3>1.5 תמונות קבלה (סריקה באמצעות בינה מלאכותית)</h3>
 <p>עסק או מנהל יכולים לבחור לצלם קבלה כדי למלא את פרטי המשלוח אוטומטית. <strong>לפני השליחה הראשונה האפליקציה מבקשת את הסכמתך.</strong> התמונה נשלחת לשירות Anthropic (Claude API) <strong>בארה"ב</strong>, לצורך חילוץ פרטי הלקוח (שם, טלפון, כתובת) בלבד. התמונה אינה נשמרת אצלנו. התמונה עשויה לכלול פרטים אישיים של לקוח הקצה. אפשר להשתמש באפליקציה בלי סריקת קבלות.</p>
@@ -96,7 +97,8 @@
 <tr><td>שם וטלפון של שליח</td><td>חברת המשלוחים, והעסק שהשליח מבצע עבורו משלוח</td></tr>
 <tr><td>כתובת מגורים ותעודת זהות של שליח</td><td>חברת המשלוחים בלבד</td></tr>
 <tr><td>היסטוריית משלוחים וחשבונות</td><td>חברת המשלוחים + העסק הרלוונטי; מנהלי העסק בלבד רואים חובות והיסטוריה</td></tr>
-<tr><td>פרטי לקוח קצה</td><td>העסק, חברת המשלוחים, והשליח שמבצע את המשלוח</td></tr>
+<tr><td>פרטי לקוח קצה במשלוח</td><td>העסק, חברת המשלוחים, והשליח שמבצע את המשלוח</td></tr>
+<tr><td>הכתובת השמורה האחרונה של לקוח (ספר הכתובות המשותף)</td><td>עסקים וחברות משלוחים בפלטפורמה שמזינים את מספר הטלפון המדויק של הלקוח בהזמנה (לא שליחים)</td></tr>
 </tbody>
 </table>
 <p><strong>איננו מוכרים מידע אישי ואיננו משתפים אותו עם צדדים שלישיים למטרות שיווק או פרסום.</strong></p>
@@ -123,7 +125,7 @@
 <li><strong>פרופיל, טלפון ואסימון התראות:</strong> עד מחיקת החשבון.</li>
 <li><strong>מיקום שליח:</strong> נשמר רק המיקום האחרון, והוא נדרס כל הזמן. קו המסלול של משלוח נמחק כשהמשלוח מסתיים או כשהשליח מתחלף.</li>
 <li><strong>רשומות משלוח והתחשבנות</strong> (כולל פרטי לקוח הקצה שבהן): נשמרות אצל העסק ואצל חברת המשלוחים כל עוד הן נדרשות לניהול, להתחשבנות ולעמידה בחובות לפי דין – <strong>גם לאחר מחיקת החשבון</strong> (ראו סעיף 7).</li>
-<li><strong>כתובות לקוחות שמורות:</strong> נשמרות אצל העסק עד שהעסק מוחק אותן או עד הסרת העסק.</li>
+<li><strong>ספר הכתובות המשותף:</strong> הכתובת האחרונה של כל לקוח נשמרת עד שהיא מתעדכנת בהזמנה חדשה, או עד שהלקוח מבקש למחוק אותה.</li>
 <li><strong>תמונות קבלה:</strong> אינן נשמרות.</li>
 </ul>
 <hr />
@@ -204,7 +206,8 @@
 <h3>1.4 End customers (delivery recipients)</h3>
 <ul>
 <li>Name, phone number, delivery address (including floor and apartment), notes and items; for some deliveries (e.g. postal) the recipient’s ID number</li>
-<li>This data is entered by the business or the delivery company. Delivery addresses are saved for the business to auto-fill future deliveries to the same customer.</li>
+<li>This data is entered by the business or the delivery company.</li>
+<li><strong>Shared address book:</strong> a customer’s latest address (name, city, street, house number, floor, apartment and entry code) is saved by their phone number and <strong>may be suggested to other businesses and delivery companies on the platform</strong> when they enter the same phone number for a future order. Each new order updates the saved address. An address can be retrieved only by the exact phone number (the address list cannot be browsed), and only by delivery-company managers and businesses — not by couriers. A customer may ask us by email to delete their saved address (section 8).</li>
 </ul>
 <h3>1.5 Receipt photos (AI scanning)</h3>
 <p>A business or manager may choose to photograph a receipt to fill in delivery details automatically. <strong>The App asks for your consent before the first upload.</strong> The photo is sent to Anthropic (Claude API) <strong>in the United States</strong>, solely to extract customer details (name, phone, address). We do not store the photo. The photo may contain the end customer’s personal details. The App can be used without receipt scanning.</p>
@@ -229,7 +232,8 @@
 <tr><td>Courier name and phone</td><td>The delivery company, and the business the courier is delivering for</td></tr>
 <tr><td>Courier home address and national ID</td><td>The delivery company only</td></tr>
 <tr><td>Delivery history and accounts</td><td>The delivery company + the relevant business; only the business’s managers see debts and history</td></tr>
-<tr><td>End-customer details</td><td>The business, the delivery company, and the courier performing the delivery</td></tr>
+<tr><td>End-customer details on a delivery</td><td>The business, the delivery company, and the courier performing the delivery</td></tr>
+<tr><td>A customer’s latest saved address (shared address book)</td><td>Businesses and delivery companies on the platform that enter the customer’s exact phone number in an order (not couriers)</td></tr>
 </tbody>
 </table>
 <p><strong>We do not sell personal information and do not share it with third parties for marketing or advertising.</strong></p>
@@ -256,7 +260,7 @@
 <li><strong>Profile, phone and push token:</strong> until the account is deleted.</li>
 <li><strong>Courier location:</strong> only the latest position is kept and is continuously overwritten. A delivery’s route line is deleted when the delivery ends or the courier changes.</li>
 <li><strong>Delivery and accounting records</strong> (including the end-customer details in them): kept by the business and the delivery company for as long as needed for operations, accounting and legal obligations – <strong>including after account deletion</strong> (see section 7).</li>
-<li><strong>Saved customer addresses:</strong> kept for the business until the business deletes them or is removed.</li>
+<li><strong>Shared address book:</strong> each customer’s latest address is kept until a new order updates it, or until the customer asks us to delete it.</li>
 <li><strong>Receipt photos:</strong> not stored.</li>
 </ul>
 <hr />
